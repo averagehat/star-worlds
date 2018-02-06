@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" type="text/css" href="all.css"> 
+       <script src="http://code.jquery.com/jquery.min.js"></script>
+    </head>
+    <body>
+<div id="nav-placeholder"> </div>
+
+<script>
+$.get("https://gist.githubusercontent.com/averagehat/841b448fca77bf79eb43367b3bfea832/raw/a0ea366656544f0f3c5dba47b88eb8d59b19a5a9/nav.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+        $("#a").addClass("active");
+});
+</script>
+<br>
+<br>
+        <div style="padding-left:16px">
+
+<font face="Courier New">
+You don't have any recorded bounties yet.
+</font>
+        </div>
+    </body>
+</html>

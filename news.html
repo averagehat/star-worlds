@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" type="text/css" href="all.css"> 
+<!--       <script src="http://code.jquery.com/jquery.min.js"></script>
+         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+    </head>
+    <body>
+<div id="nav-placeholder"> </div>
+
+<script>
+$.get("https://gist.githubusercontent.com/averagehat/841b448fca77bf79eb43367b3bfea832/raw/a0ea366656544f0f3c5dba47b88eb8d59b19a5a9/nav.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+        $("#n").addClass("active");
+});
+</script>
+<br>
+<br>
+        <div id="stories" style="padding-left:16px">
+
+<font face="Baskerville">
+    <h2> Spice Mine Revolt Crushed <h3>
+            Republic officers are considering launching an investigation on <span class="redacted"> blah blah </span> where reports indicate a here-to-fore hidden spice mine erupted in violence this Triday when <span class="redacted"> Lithoriann </span> workers banded together in a fight for freedom 
+<a id="continue" href="#"> . . . </a><br>
+<a href="#" onClick="bootbox.alert({
+    message: 'Access Error: Content risk level three.',
+    className: 'bb-alternate-modal',
+    animate: true,
+    size: 'small'
+});"> . . . </a>
+</font>
+<!-- <a href="#" onClick="alert('Access Denied.')"> . . . </a> -->
+        </div>
+    </body>
+<script> 
+makeStory = function (headline, story, extra) {
+
+ $('<font face="Baskerville"> <h2>' + headline + ' <h3> '  + story + ' <a style="text-decoration: underline" id="' + headline + '" href="#"> . . . </a><br> </font>').insertAfter("#stories");
+
+ if (extra != null) {
+  $("#" + headline).click(function(e) {
+  e.preventDefault();
+  $(this).replaceWith('<span> ' + extra + ' </span>');
+}); 
+}
+ else {
+  $("#" + headline).click(function(e) {
+   bootbox.alert({
+     message: 'Access Error: Content risk level three.',
+     className: 'bb-alternate-modal',
+     animate: true,
+     size: 'small' }) 
+  })
+ }
+}
+
+makeStory("accessible", "bar", "some stuff");
+makeStory("censored", "yeah can't do that", null);
+</script>
+<!--
+<a href="#" onClick="bootbox.alert({
+    message: 'Access Error: Content risk level three.',
+    className: 'bb-alternate-modal',
+    animate: true,
+    size: 'small'
+});"> . . . </a>
+</font>
+
+<script> 
+$("#continue").click(function(e) {
+  e.preventDefault();
+  $(this).replaceWith('<span> blarg </span>');
+})
+</script>
+--!>
+</html>

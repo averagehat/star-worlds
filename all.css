@@ -1,0 +1,77 @@
+
+body {margin:0;}
+
+.topnav {
+      overflow: hidden;
+            background-color: #333;
+}
+
+.topnav a {
+        font: 15px arial, sans-serif;
+
+      float: left;
+            color: #f2f2f2;
+                  text-align: center;
+                        padding: 14px 16px;
+                              text-decoration: none;
+                                    font-size: 17px;
+}
+
+.topnav a:hover {
+      background-color: #5C6A5C;
+            color: black;
+}
+
+
+.status {
+    color: white;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.status label {
+    color: red;
+    font-style: italic;
+}
+
+.topnav a.active {
+      /* background-color: #5C6A5C; */
+            color: white;
+}
+.redacted {
+        color: black;
+            background-color: black;
+                white-space:nowrap;
+                    -moz-transform: rotate(.8deg) skewx(-12deg);
+                        -moz-box-shadow:3px 0 2px #444;
+                            border:1px dotted #555;
+                                background: -moz-linear-gradient(180deg, #000, #222);
+                            }
+
+                            /* Add a few more selectors with slightly varying styles */
+                            .redacted:first-child {
+                                    -moz-transform: rotate(-.8deg);
+                                }
+                                .redacted:first-child + .redacted {
+                                        -moz-transform: rotate(3deg);
+                                    }
+
+                                    /* Highlight effect */
+                                    .redacted::-moz-selection {
+                                            background:#e6ff3f;
+                                        }
+
+
+table {
+	font-size: 1em;
+}
+
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}
+
+.ui-dialog-content {
+      background-color: #5C6A5C;
+}
