@@ -31,9 +31,9 @@ $.get("https://gist.githubusercontent.com/averagehat/841b448fca77bf79eb43367b3bf
         <div id="stories" style="padding-left:16px">
 
 <font face="Baskerville">
-    <h2> Spice Mine Revolt Crushed <h3>
-            Republic officers are considering launching an investigation on <span class="redacted"> blah blah </span> where reports indicate a here-to-fore hidden spice mine erupted in violence this Triday when <span class="redacted"> Lithoriann </span> workers banded together in a fight for freedom 
-<a id="continue" href="#"> . . . </a><br>
+    <h2> Spice Mine Revolt Crushed</h2> <h3>
+            Republic officers are considering launching an investigation on <span class="redacted">~~~~~~~~~</span> where reports indicate a here-to-fore hidden spice mine erupted in violence this Triday when <span class="redacted">~~~~~~~</span> workers banded together in a fight for freedom 
+            <a id="continue" href="#"> . . . </a><br> </h3>
 <a href="#" onClick="bootbox.alert({
     message: 'Access Error: Content risk level three.',
     className: 'bb-alternate-modal',
@@ -45,18 +45,20 @@ $.get("https://gist.githubusercontent.com/averagehat/841b448fca77bf79eb43367b3bf
         </div>
     </body>
 <script> 
-makeStory = function (headline, story, extra) {
+makeStory = function (id, headline, story, extra, image) {
 
- $('<font face="Baskerville"> <h2>' + headline + ' <h3> '  + story + ' <a style="text-decoration: underline" id="' + headline + '" href="#"> . . . </a><br> </font>').insertAfter("#stories");
 
+ $('<font face="Baskerville"> <h2>' + headline + ' <h3> '  + story + ' <a style="text-decoration: underline" id="' + id + '" href="#"> . . . </a><br> </font>').insertAfter("#stories");
+ console.log(extra);
  if (extra != null) {
-  $("#" + headline).click(function(e) {
-  e.preventDefault();
+  $("#" + id).click(function(e) {
+  // e.preventDefault();
+  console.log(extra);
   $(this).replaceWith('<span> ' + extra + ' </span>');
 }); 
 }
  else {
-  $("#" + headline).click(function(e) {
+  $("#" + id).click(function(e) {
    bootbox.alert({
      message: 'Access Error: Content risk level three.',
      className: 'bb-alternate-modal',
@@ -66,8 +68,10 @@ makeStory = function (headline, story, extra) {
  }
 }
 
-makeStory("accessible", "bar", "some stuff");
-makeStory("censored", "yeah can't do that", null);
+s = '<img src="Kel_Dor_censored.jpg" alt="..." class="img-thumbnail" style="max-height: 200px; max-width: 200px;">'
+makeStory("2", "The Fathers Announce First Ever Private Sale of Planet", s + "<br>  The galactic faction anounced this week the sale of the planet once known as <span class='redacted'> ________ </span class='redacted'>  to an anonymous Kel Dor buyer. A poll conducted by The Fathers", "showed 99% approval from natives of the planet. The planet, which will adopt the new name JoyHome, is temporarily closed to interplanetary travel.")
+makeStory("3", "Accessible Story Here", "bar", "some stuff");
+makeStory("1", "Scientists ", "yeah can't do that", null);
 </script>
 <!--
 <a href="#" onClick="bootbox.alert({
