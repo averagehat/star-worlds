@@ -2,6 +2,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <link rel="stylesheet" type="text/css" href="all.css"> 
+
+ <link rel="shortcut icon" type="image/x-icon" href="media/favicon.ico">
 <!--       <script src="http://code.jquery.com/jquery.min.js"></script>
          <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 
@@ -16,12 +18,14 @@
 
 
 
+ <link rel="shortcut icon" type="image/x-icon" href="media/favicon.ico">
     </head>
     <body>
 <div id="nav-placeholder"> </div>
 
 <script>
-$.get("https://gist.githubusercontent.com/averagehat/841b448fca77bf79eb43367b3bfea832/raw/a0ea366656544f0f3c5dba47b88eb8d59b19a5a9/nav.html", function(data){
+
+$.get("https://rawgit.com/averagehat/841b448fca77bf79eb43367b3bfea832/raw/21232b3d45444d5a8c14720002936190ab22b3c1/nav.html", function(data){
         $("#nav-placeholder").replaceWith(data);
         $("#n").addClass("active");
 });

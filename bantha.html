@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" type="text/css" href="all.css"> 
+       <script src="https://code.jquery.com/jquery.min.js"></script>
+     <link rel="shortcut icon" type="image/x-icon" href="media/favicon.ico">
+    </head>
+    <body>
+<div id="nav-placeholder"> </div>
+
+<script>
+$.get("https://gist.githubusercontent.com/averagehat/841b448fca77bf79eb43367b3bfea832/raw/a0ea366656544f0f3c5dba47b88eb8d59b19a5a9/nav.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+        $("#b").addClass("active");
+});
+</script>
+
+<script
+                          src="http://code.jquery.com/jquery-3.3.1.js"
+                          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                          crossorigin="anonymous"></script>
+</br></br>
+
+
+<font face="Courier New">
+<h3> Investigation </h3>
+Target killing livestock 
+<br>
+
+Monied rubes concerned
+<h3> Code: 1 </h3>
+Nonlethal target; lethal environment.  
+<h3> Locale </h3>
+Mos Eisley region
+<br>
+
+<h3> Active Agents: 1 </h3>
+    
+Unknown
+<h3> Media </h3> </br> 
+ <figure>
+
+       <img src="newview.jpg" title="74.23 98.31 01.1" width="304" height="228"> <figcaption>Aerial photograph of desert pattern formation <br> appearing overnight last Quadday</figcaption>
+</figure>
+
+</br>
+<h3> Contact: Dubi Aynes </h3>
+ A79948.442.7899
+ <br>
+<audio controls>
+         <source src="Sleep Away.mp3" type="audio/mpeg">
+           Your browser does not support the audio tag.
+       </audio>
+
+
+<h3> Contact: [Councilman] Deev </h3>
+ A79948.442.1212
+</font>
+<script>
+
+$("#continue").click(function(e) {
+  e.preventDefault();
+  $(this).replaceWith('<span> blarg </span>');
+})
+</script>
+
+<br>
+<br>
+    </body>
+</html>
