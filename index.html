@@ -37,7 +37,12 @@ $.get("https://rawgit.com/averagehat/841b448fca77bf79eb43367b3bfea832/raw/415848
 <font face="Baskerville">
     <h2> Spice Mine Revolt Crushed</h2> <h3>
             Republic officers are considering launching an investigation on <span class="redacted">~~~~~~~~~</span> where reports indicate a here-to-fore hidden spice mine erupted in violence this Triday when <span class="redacted">~~~~~~~</span> workers banded together in a fight for freedom.
-            <a id="continue" href="#"> Read More</a><br> </h3>
+            <a id="continue" href="#a" style="text-decoration: underline" onClick="bootbox.alert({
+    message: 'Access Error: Content risk level three.',
+    className: 'bb-alternate-modal',
+    animate: true,
+    size: 'small'
+    });" > Read More</a><br> </h3>
 <!--<a href="#" onClick="bootbox.alert({
     message: 'Access Error: Content risk level three.',
     className: 'bb-alternate-modal',
@@ -53,7 +58,7 @@ $.get("https://rawgit.com/averagehat/841b448fca77bf79eb43367b3bfea832/raw/415848
 makeStory = function (id, headline, story, extra, image) {
 
 
-    $('<hr><font face="Baskerville"> <h2> ' + headline + ' <h3> '  + story + ' <a style="text-decoration: underline" id="' + id + '" href="#"> Read More</a><br> </font>').appendTo("#stories");
+    $('<hr><font face="Baskerville"> <h2> ' + headline + ' <h3> '  + story + ' <a style="text-decoration: underline" id="' + id + '" href="#a"> Read More</a><br> </font>').appendTo("#stories");
  //$('<font face="Baskerville"> <h2>' + headline + ' <h3> '  + story + ' <a style="text-decoration: underline" id="' + id + '" href="#"> . . . </a><br> </font>').insertAfter("#stories");
  console.log(extra);
  if (extra != null) {
